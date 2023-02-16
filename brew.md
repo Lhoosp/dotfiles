@@ -1,10 +1,4 @@
-brew install exa
-brew install fish
-brew install git
-brew install neovim
-brew install rustup
-brew install tig
-brew install tmux
-brew install --cask figma
+brew install git tig neovim tmux exa figma appcleaner fish starship rustup 
 
-# starship
+brew tap homebrew/cask-fonts
+brew search '/font-.*-nerd-font/' | awk '{ print $1 }' | xargs brew install --cask
