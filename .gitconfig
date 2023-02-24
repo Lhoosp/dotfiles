@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 
 [user]
-    name = hialen21
+    name = Lhoos
 
 [core]
 	excludesfile = ~/.gitignore
