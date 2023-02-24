@@ -1,8 +1,10 @@
 #!/bin/bash
 brew install git
+brew install tig
 brew install neovim
 brew install tmux
 brew install exa
+brew install peco
 brew install --cask figma
 brew install --cask amethyst
 brew install --cask agenda
