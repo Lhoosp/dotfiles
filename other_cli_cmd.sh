@@ -4,4 +4,4 @@
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm #in
 
 # change shell
-echo $(which fish) >> /etc/shells && sudo chsh -s $(which fish) fish
+echo $(which fish) | sudo tee -a /etc/shells && sudo chsh -s $(which fish)
