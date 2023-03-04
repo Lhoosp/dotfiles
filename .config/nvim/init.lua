@@ -4,7 +4,6 @@ vim.opt.termguicolors = true
 
 vim.opt.backspace = 'indent,eol,nostop'
 
-vim.opt.breakindent = true
 vim.opt.wrap = false
 vim.opt.autoindent = true
 vim.opt.smartindent = true
