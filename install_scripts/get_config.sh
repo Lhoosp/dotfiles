@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # get dotfiles
-git clone git@github.com:Lhoosp/dotfiles.git
+git clone git@github.com:Lhoosp/dotfiles.git $HOME
 
 # enable settings
 cp -R ~/dotfiles/.config $HOME

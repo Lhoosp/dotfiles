@@ -1,7 +1,6 @@
 #!/bin/bash
-echo "The main script"
 
-installpath = $HOME/dotfiles/install_scripts
+installpath=$HOME/dotfiles/install_scripts
 
 source $installpath/get_new_ssh.sh
 source $installpath/brew.sh
