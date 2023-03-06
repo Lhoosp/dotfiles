@@ -1,9 +1,9 @@
 #!/bin/bash
 
-installpath=$HOME/dotfiles/scripts
+script="$HOME/dotfiles/scripts"
 
-source $installpath/getSSH.sh
-source $installpath/brew.sh
-source $installpath/copyConfig.sh
-source $installpath/rust.sh
-source $installpath/changeShell.sh
+source $script/getSSH.sh
+source $script/brew.sh
+source $script/copyConfig.sh
+source $script/rust.sh
+source $script/changeShell.sh
