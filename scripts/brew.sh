@@ -14,7 +14,6 @@ brew install tmux
 brew install exa
 brew install peco
 brew install --cask amethyst
-brew install --cask agenda
 brew install --cask iterm2
 brew install fish
 brew install starship
