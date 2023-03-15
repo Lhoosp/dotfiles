@@ -19,4 +19,6 @@ vim.opt.smartcase = true
 
 vim.opt.title = true
 
+vim.opt.clipboard:prepend { 'unnamed' , 'unnamedplus' }
+
 vim.opt.autoread = true
