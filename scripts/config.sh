@@ -1,9 +1,13 @@
 #!/bin/bash
 
-# get dotfiles
-git clone git@github.com:Lhoosp/dotfiles.git $HOME
+# enable skhd, yabai
+brew services start yabai
+brew services start skhd
 
-# enable settings
+# dotfiles
+git clone git@github.com:Lhoosp/dotfiles.git $HOME/dotfiles
+
+# settings
 cp -R ~/dotfiles/.config $HOME
 cp ~/dotfiles/.gitconfig $HOME
 cp ~/dotfiles/.gitignore $HOME
