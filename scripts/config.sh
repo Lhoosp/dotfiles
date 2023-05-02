@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # enable skhd, yabai
-brew services start yabai
-brew services start skhd
+yabai --start-service 
+skhd --start-service 
 
 # dotfiles
 git clone git@github.com:Lhoosp/dotfiles.git $HOME/dotfiles
