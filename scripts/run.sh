@@ -1,6 +1,6 @@
 #!/bin/bash
 
-script="$(pwd)"
+script="$(pwd)" #запускать из папки со скриптами
 
 source $script/new_ssh.sh
 source $script/brew.sh
