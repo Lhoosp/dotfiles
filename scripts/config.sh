@@ -15,9 +15,6 @@ cp ~/dotfiles/.gitignore $HOME
 # tpm install
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
-# change hibernatemod
-sudo pmset hibernatemode 0
-
 # rust install
 rustup-init
 
