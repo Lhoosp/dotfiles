@@ -1,3 +1,4 @@
+-- neovim default configuration
 vim.opt.background = 'light'
 vim.cmd[[colorscheme shine]]
 vim.opt.termguicolors = true
@@ -22,3 +23,6 @@ vim.opt.title = true
 vim.opt.clipboard:prepend { 'unnamed' , 'unnamedplus' }
 
 vim.opt.autoread = true
+
+-- plugins file loaded
+require('plugins')

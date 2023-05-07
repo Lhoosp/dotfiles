@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# enable skhd, yabai
-yabai --start-service 
-skhd --start-service 
-
 # dotfiles
 git clone git@github.com:Lhoosp/dotfiles.git $HOME/dotfiles
 
@@ -20,6 +16,10 @@ rustup-init
 
 # rustlings install
 curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash
+
+# enable skhd, yabai
+yabai --start-service 
+skhd --start-service 
 
 # change shell
 echo $(which fish) | sudo tee -a /etc/shells && chsh -s $(which fish)
