@@ -1,9 +1,9 @@
 -- neovim default configuration
 
-vim.opt.background = 'dark'
-vim.cmd[[colorscheme slate]]
+vim.opt.background = 'light'
+vim.cmd[[colorscheme lunaperche]]
 vim.opt.termguicolors = true
-vim.cmd[[highlight clear SignColumn]] --vim.opt.signcolumn=number
+vim.cmd[[highlight clear SignColumn]] 
 
 
 vim.opt.backspace = 'indent,eol,nostop'
