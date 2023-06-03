@@ -1,7 +1,10 @@
 -- neovim default configuration
-vim.opt.background = 'light'
-vim.cmd[[colorscheme shine]]
+
+vim.opt.background = 'dark'
+vim.cmd[[colorscheme slate]]
 vim.opt.termguicolors = true
+vim.cmd[[highlight clear SignColumn]] --vim.opt.signcolumn=number
+
 
 vim.opt.backspace = 'indent,eol,nostop'
 
@@ -26,4 +29,3 @@ vim.opt.clipboard:prepend { 'unnamed' , 'unnamedplus' }
 vim.opt.autoread = true
 
 vim.opt.swapfile = false
-
