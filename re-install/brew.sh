@@ -13,12 +13,3 @@ brew install neovim
 brew install tmux
 brew install exa
 brew install peco
-brew install fish
-brew install starship
-brew install rustup
-brew install --cask iterm2
-brew install --cask vlc
-brew install --cask android-studio
-brew tap homebrew/cask-fonts && brew install --cask font-meslo-lg-nerd-font
-brew install koekeishiya/formulae/skhd
-brew install koekeishiya/formulae/yabai
