@@ -67,3 +67,21 @@ vim.keymap.set( "n", "<leader>bo", ":new<CR>" ) -- open new tab
 vim.keymap.set( "n", "<leader>bc", ":bdelete<CR>" ) -- close current tab
 vim.keymap.set( "n", "<leader>bn", ":bn<CR>" ) --  go to next tab
 vim.keymap.set( "n", "<leader>bp", ":bp<CR>" ) --  go to previous tab
+
+-- for telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- for LuaShip
+vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-J>", function() ls.jump(-1) end, {silent = true})
+
+vim.keymap.set({"i", "s"}, "<C-E>", function()
+	if ls.choice_active() then
+		ls.change_choice(1)
+	end
+end, {silent = true})
