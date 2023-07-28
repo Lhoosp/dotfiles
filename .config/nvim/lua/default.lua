@@ -1,9 +1,9 @@
 --> termiguicolors & colorscheme
-vim.opt.termguicolors = true -- set 256 colors
+vim.opt.termguicolors = true -- activate 256 colors
 vim.opt.background = "light" -- if availabe "dark" or "light" set light
 vim.opt.signcolumn = "yes" -- show sign column so that text doestn't shift
-vim.cmd[[highlight clear SignColumn]] -- when no sign define shows empty column
-vim.cmd[[colorscheme lunaperche]] -- set colorscheme
+vim.cmd[[highlight clear SignColumn]] -- when no sign define, shows empty column
+vim.cmd[[colorscheme lunaperche]] -- setup colorscheme
 
 --> line wrapping
 vim.opt.wrap = false -- disable line wrapping
@@ -36,8 +36,8 @@ vim.opt.title = true -- title for opened panes
 vim.opt.clipboard:append ("unnamedplus") -- use system clipboard as default register
 
 --> split windows
-vim.opt.splitright = true -- split vertical window to the right
-vim.opt.splitbelow = true -- split horizontal window to the bottom
+vim.opt.splitright = true -- split vertical window to the right; prevent nesting
+vim.opt.splitbelow = true -- split horizontal window to the bottom; prevent nesting
 
 --> spelling
 vim.opt.spell = true -- get underline for mistaken words
