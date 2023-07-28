@@ -39,4 +39,4 @@ Thumbs.db
 
 # .vim redundancy #
 ###################
-~/dotfiles/.config/nvim/lua/.vim/
+/.vim
