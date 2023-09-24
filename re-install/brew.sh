@@ -15,7 +15,7 @@ brew install exa # faster alternative "ls"
 brew install tree # beautiful show files in directories
 #brew install peco
 brew install ack # faster alternative "grep"
-brew install fzf # fuzzy finder (cool thing)
+#brew install fzf # fuzzy finder (cool thing)
 
 brew install fish # get fish-shell
 brew install starship # useful terminal suggestions

@@ -85,6 +85,7 @@ return require("packer").startup(function(use)
 	require("lspconfig").texlab.setup({}) -- LaTex
 	require("lspconfig").pkgbuild_language_server.setup({}) -- Bash
 	require("lspconfig").vale_ls.setup({}) -- Markdown
+	require("lspconfig").gopls.setup({}) -- Go
 
 	--> nerdtree
 
