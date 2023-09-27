@@ -9,7 +9,7 @@ source $script/plug_manager.sh
 source $script/yabai&skhd.sh
 
 source $script/dotfiles.sh
-source $script/rust.sh
+#source $script/rust.sh
 source $script/config.sh
 
 echo "-------------------------------------------"

@@ -10,9 +10,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install git
 #brew install tig # help with git
 brew install neovim
-brew install tmux
+#brew install tmux
 brew install exa # faster alternative "ls"
-brew install tree # beautiful show files in directories
+#brew install tree # beautiful show files in directories
 #brew install peco
 brew install ack # faster alternative "grep"
 #brew install fzf # fuzzy finder (cool thing)
