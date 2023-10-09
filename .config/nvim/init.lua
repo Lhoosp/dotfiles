@@ -1,3 +1,3 @@
 require "default"
-require "keymaps"
 require "plugins"
+require "keymaps"
