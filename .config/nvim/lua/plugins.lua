@@ -162,10 +162,14 @@ return require("packer").startup(function(use)
 
 	--> tpope/vim-dotenv
 
-	--> telescope
+	---------------
+	-- telescope --
+	---------------
 	require("telescope").setup({})
 
-	--> comment
+	-------------
+	-- comment --
+	-------------
 	require("Comment").setup({})
 
 
