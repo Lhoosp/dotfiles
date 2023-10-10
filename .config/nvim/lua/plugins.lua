@@ -29,6 +29,7 @@ return require("packer").startup(function(use)
 		},
 	}
 	use "numToStr/Comment.nvim" -- comment to gc(line comment) and gb(block comment) in all language
+	use "shaunsingh/solarized.nvim" -- nvim solarized colorscheme
 
 
 -----------------------------------------------------------------------------------------
@@ -85,7 +86,6 @@ return require("packer").startup(function(use)
 	require("lspconfig").texlab.setup({}) -- LaTex
 	require("lspconfig").pkgbuild_language_server.setup({}) -- Bash
 	require("lspconfig").vale_ls.setup({}) -- Markdown
-	require("lspconfig").gopls.setup({}) -- Go
 
 	--> nerdtree
 
@@ -173,6 +173,10 @@ return require("packer").startup(function(use)
 	-------------
 	require("Comment").setup({})
 
+	---------------
+	-- solarized --
+	---------------
+	require("solarized").set()
 
 end)
 -----------------------------------------------------------------------------------------

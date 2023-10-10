@@ -1,9 +1,18 @@
 --> termiguicolors & colorscheme
 vim.opt.termguicolors = true -- activate 256 colors
-vim.opt.background = "light" -- if availabe "dark" or "light" set light
+--vim.opt.background = "light" -- if availabe "dark" or "light" set light
 vim.opt.signcolumn = "yes" -- show sign column so that text doestn't shift
 vim.cmd[[highlight clear SignColumn]] -- when no sign define, shows empty column
-vim.cmd[[colorscheme lunaperche]] -- setup colorscheme
+--vim.cmd[[colorscheme lunaperche]] -- setup colorscheme
+
+--colorscheme for solarized theme--
+	vim.g.solarized_italic_comments = true
+	vim.g.solarized_italic_keywords = true
+	vim.g.solarized_italic_functions = true
+	vim.g.solarized_italic_variables = false
+	vim.g.solarized_contrast = true
+	vim.g.solarized_borders = false
+	vim.g.solarized_disable_background = false
 
 --> line wrapping
 vim.opt.wrap = false -- disable line wrapping
