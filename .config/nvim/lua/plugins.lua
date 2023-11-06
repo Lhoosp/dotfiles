@@ -29,7 +29,9 @@ return require("packer").startup(function(use)
 		},
 	}
 	use "numToStr/Comment.nvim" -- comment to gc(line comment) and gb(block comment) in all language
-	use "shaunsingh/solarized.nvim" -- nvim solarized colorscheme
+	-- use "shaunsingh/solarized.nvim" -- nvim solarized colorscheme
+	use "sainnhe/gruvbox-material" -- modified nvim gruvbox theme
+	use "lervag/vimtex" -- LaTex in neovim
 
 
 -----------------------------------------------------------------------------------------
@@ -171,13 +173,16 @@ return require("packer").startup(function(use)
 	-------------
 	-- comment --
 	-------------
-	require("Comment").setup({})
+	require("Comment").setup({}) -- "gc" for comment line; "gb" comment block
 
 	---------------
 	-- solarized --
 	---------------
-	require("solarized").set()
+	--require("solarized").set()
 
+	--> sainnhe/gruvbox-material
+
+	--> lervag/vimtex 
 end)
 -----------------------------------------------------------------------------------------
 
