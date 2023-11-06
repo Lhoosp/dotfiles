@@ -1,9 +1,7 @@
 --> termiguicolors & colorscheme
 vim.opt.termguicolors = true -- activate 256 colors
-vim.opt.background = "light" -- if availabe "dark" or "light" set light
 vim.opt.signcolumn = "yes" -- show sign column so that text doestn't shift
 vim.cmd[[highlight clear SignColumn]] -- when no sign define, shows empty column
-vim.cmd[[colorscheme lunaperche]] -- setup colorscheme
 
 --> line wrapping
 vim.opt.wrap = false -- disable line wrapping
