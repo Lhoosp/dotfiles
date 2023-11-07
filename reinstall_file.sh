@@ -8,7 +8,7 @@ echo "-------------------------------------------"
 echo "-------------------------------------------"
 echo "-------------------------------------------"
 echo "-------------------------------------------"
-echo "!!! Paste key to GitHub and press Space !!!"
+echo "!!! Paste key in GitHub and press Space !!!"
 echo "-------------------------------------------"
 echo "-------------------------------------------"
 echo "-------------------------------------------"
@@ -42,6 +42,9 @@ brew install --cask iterm2
 
 ### change shell to fish ###
 echo $(which fish) | sudo tee -a /etc/shells && chsh -s $(which fish)
+
+# hibernatemode to 0;
+sudo pmset hibernatemode 0
 
 ### Plugin manager ###
 #packer_nvim
