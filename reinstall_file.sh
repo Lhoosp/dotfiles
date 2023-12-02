@@ -33,6 +33,8 @@ brew install ack # faster alternative "grep"
 brew install fish # get fish-shell
 brew install starship # useful terminal suggestions
 brew tap homebrew/cask-fonts && brew install --cask font-meslo-lg-nerd-font # meslo font
+#brew install check
+#brew install gcovr
 
 #casks
 brew install --cask iterm2
@@ -54,7 +56,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 #git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 ### clone dotfiles ###
-git clone git@github.com:Lhoosp/dotfiles.git $HOME/dotfiles
+#git clone git@github.com:Lhoosp/dotfiles.git $HOME/dotfiles
 cp -R ~/dotfiles/.config $HOME
 cp ~/dotfiles/.gitconfig $HOME
 cp ~/dotfiles/.gitignore $HOME
