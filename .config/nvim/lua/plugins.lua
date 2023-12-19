@@ -22,7 +22,7 @@ return require("packer").startup(function(use)
 			"rafamadriz/friendly-snippets" -- vscode style snippet
 		}
 	}
-	use "tpope/vim-dotenv" -- по-моему не работает, ожидается, что будет импортировать глобальные переменные
+	--use "tpope/vim-dotenv" -- по-моему не работает, ожидается, что будет импортировать глобальные переменные
 	use {"nvim-telescope/telescope.nvim", -- fuzzy search
   		requires = {
 			"nvim-lua/plenary.nvim", -- all lua function
@@ -31,7 +31,54 @@ return require("packer").startup(function(use)
 	use "numToStr/Comment.nvim" -- comment to gc(line comment) and gb(block comment) in all language
 	-- use "shaunsingh/solarized.nvim" -- nvim solarized colorscheme
 	use "sainnhe/gruvbox-material" -- modified nvim gruvbox theme
-	use "lervag/vimtex" -- LaTex in neovim
+	-- use "lervag/vimtex" -- LaTex in neovim
+
+	use "jay-babu/mason-nvim-dap.nvim"
+	use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+	--use "theHamsta/nvim-dap-virtual-text"
+	require("dapui").setup()
+	-- require("codelldb").setup()
+	require("mason-nvim-dap").setup({
+    	automatic_setup = true,
+	})
+	require("dap").adapters.lldb = {
+		type = "executable",
+		command = "/usr/bin/lldb-vscode", -- adjust as needed
+		name = "lldb",
+	}
+
+	local lldb = {
+		name = "Launch lldb",
+		type = "lldb", -- matches the adapter
+		request = "launch", -- could also attach to a currently running process
+		program = function()
+			return vim.fn.input(
+				"Path to executable: ",
+				vim.fn.getcwd() .. "/",
+				"file"
+			)
+		end,
+		cwd = "${workspaceFolder}",
+		stopOnEntry = false,
+		args = {},
+		runInTerminal = false,
+	}
+	require('dap').configurations.c = {
+		lldb -- different debuggers or more configurations can be used here
+	}
+
+    local dap = require('dap')
+    dap.configurations.python = {
+      {
+        type = 'python';
+        request = 'launch';
+        name = "Launch file";
+        program = "${file}";
+        pythonPath = function()
+          return '/usr/bin/python'
+        end;
+      },
+    }
 
 
 -----------------------------------------------------------------------------------------

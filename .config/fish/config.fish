@@ -6,6 +6,8 @@ if status is-interactive
     set -gx PATH ~/bin $PATH
     set -gx PATH ~/.local/bin $PATH
 	set -gx PATH ~/.cargo/bin $PATH
+  	export CPATH=/opt/homebrew/include
+  	export LIBRARY_PATH=/opt/homebrew/lib
 
     set -gx EDITOR nvim
 
