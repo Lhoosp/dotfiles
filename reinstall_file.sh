@@ -60,6 +60,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 ### clone dotfiles ###
 git clone git@github.com:Lhoosp/dotfiles.git $HOME/dotfiles
+cd ~/dotfiles && git checkout develop
 cp -Rf ~/dotfiles/.config $HOME
 cp ~/dotfiles/.gitconfig $HOME
 cp ~/dotfiles/.gitignore $HOME
