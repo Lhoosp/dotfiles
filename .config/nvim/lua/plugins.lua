@@ -173,7 +173,7 @@ return require("packer").startup(function(use)
 				end},
 			},
 			{name = "path"},
-			{name = "cmdline"},
+			-- {name = "cmdline"},
 			{name = "luasnip"},
 		},
 		mapping = {
@@ -206,6 +206,15 @@ return require("packer").startup(function(use)
 			globals = {'ls'}, -- get the language server to recognize the `vim` global
 		},
 
+	})
+
+	-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+	cmp.setup.cmdline(':', {
+	 sources = cmp.config.sources({
+	   { name = 'path' }
+	 }, {
+	   { name = 'cmdline' }
+	 })
 	})
 
 	require("luasnip.loaders.from_vscode").lazy_load({}) -- activate friendly-snippets
