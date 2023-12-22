@@ -85,3 +85,10 @@ vim.keymap.set({"i", "s"}, "<C-E>", function()
 		ls.change_choice(1)
 	end
 end, {silent = true})
+
+-- Debugger
+vim.api.nvim_set_keymap("n", "<leader>dt", "<cmd> DapUiToggle<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "<leader>db", "<cmd> DapToggleBreakpoint<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "<leader>dc", "<cmd> DapContinue<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "<leader>dr", "<cmd> lua require('dapui').open({reset = true})<CR>", {noremap=true})
+

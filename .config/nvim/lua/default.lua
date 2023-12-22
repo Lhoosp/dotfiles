@@ -18,7 +18,7 @@ vim.opt.backspace = "indent,eol,nostop" -- correct work backspace when indent, e
 --> line number
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.scrolloff = 11 -- lines above or below cursor when scrolling
+vim.opt.scrolloff = 18 -- lines above or below cursor when scrolling
 
 --> cursor line 
 vim.opt.cursorline = true -- highlight the current cursor line

@@ -22,7 +22,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #formulaes
 brew install git
-#brew install tig # help with git
+brew install tig # help with git
 brew install neovim
 #brew install tmux
 brew install exa # faster alternative "ls"
@@ -33,12 +33,17 @@ brew install ack # faster alternative "grep"
 brew install fish # get fish-shell
 brew install starship # useful terminal suggestions
 brew tap homebrew/cask-fonts && brew install --cask font-meslo-lg-nerd-font # meslo font
+#21-school
+brew install check
+brew install gcovr
 
 #casks
 brew install --cask iterm2
 #brew install --cask vlc
-#brew install --cask android-studio
+brew install --cask android-studio
 #brew install --cask basictex # LaTex for Vim
+brew install --cask numi
+brew install --cask docker
 
 ### change shell to fish ###
 echo $(which fish) | sudo tee -a /etc/shells && chsh -s $(which fish)
@@ -47,15 +52,16 @@ echo $(which fish) | sudo tee -a /etc/shells && chsh -s $(which fish)
 sudo pmset hibernatemode 0
 
 ### Plugin manager ###
-#packer_nvim
+# packer
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-#tpm (tmux plugin manager)
+# tmux plugin manager
 #git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 ### clone dotfiles ###
 git clone git@github.com:Lhoosp/dotfiles.git $HOME/dotfiles
-cp -R ~/dotfiles/.config $HOME
+cd ~/dotfiles && git checkout develop
+cp -Rf ~/dotfiles/.config $HOME
 cp ~/dotfiles/.gitconfig $HOME
 cp ~/dotfiles/.gitignore $HOME
 
@@ -67,6 +73,6 @@ yabai --start-service
 skhd --start-service 
 
 ### rust ###
-brew install rustup # установка установщика rust ))
-rustup-init # непосредственная установка rust
-curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash # обучалка по rust
+#brew install rustup # установка установщика rust ))
+#rustup-init # непосредственная установка rust
+#curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash # обучалка по rust
