@@ -33,6 +33,7 @@ return require("packer").startup(function(use)
 	use "sainnhe/gruvbox-material" -- modified nvim gruvbox theme
 	-- use "lervag/vimtex" -- LaTex in neovim
 
+	-- DAP +++
 	use "jay-babu/mason-nvim-dap.nvim"
 	use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 	--use "theHamsta/nvim-dap-virtual-text"
@@ -75,7 +76,7 @@ return require("packer").startup(function(use)
         name = "Launch file";
         program = "${file}";
         pythonPath = function()
-          return '/usr/bin/python'
+          	return '/usr/bin/python'
         end;
       },
     }
@@ -134,7 +135,7 @@ return require("packer").startup(function(use)
 	require("lspconfig").clangd.setup({}) -- C-language
 	require("lspconfig").texlab.setup({}) -- LaTex
 	require("lspconfig").pkgbuild_language_server.setup({}) -- Bash
-	require("lspconfig").vale_ls.setup({}) -- Markdown
+	require'lspconfig'.vale_ls.setup{}
 
 	--> nerdtree
 
@@ -147,9 +148,9 @@ return require("packer").startup(function(use)
 	--------------
 
 	local has_words_before = function()
-	  unpack = unpack or table.unpack
-	  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-	  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+		unpack = unpack or table.unpack
+		local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+	  	return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 	end
 
 	local luasnip = require("luasnip")
@@ -157,9 +158,9 @@ return require("packer").startup(function(use)
 
 	require("cmp").setup({
 		snippet = {
-		  expand = function(args)
-			require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-		  end,
+			expand = function(args)
+				require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+		  	end,
 		},
 		window = {
        		completion = cmp.config.window.bordered(),
@@ -173,7 +174,6 @@ return require("packer").startup(function(use)
 				end},
 			},
 			{name = "path"},
-			-- {name = "cmdline"},
 			{name = "luasnip"},
 		},
 		mapping = {
@@ -210,11 +210,10 @@ return require("packer").startup(function(use)
 
 	-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 	cmp.setup.cmdline(':', {
-	 sources = cmp.config.sources({
-	   { name = 'path' }
-	 }, {
-	   { name = 'cmdline' }
-	 })
+	 	sources = cmp.config.sources({
+	   		{ name = 'path' },
+	   		{ name = 'cmdline' }
+	 	})
 	})
 
 	require("luasnip.loaders.from_vscode").lazy_load({}) -- activate friendly-snippets
