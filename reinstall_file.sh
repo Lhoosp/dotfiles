@@ -22,17 +22,26 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #formulaes
 brew install git
-brew install tig # help with git
+# help with git
+brew install tig 
 brew install neovim
 #brew install tmux
-brew install exa # faster alternative "ls"
-#brew install tree # beautiful show files in directories
-#brew install peco
-brew install ack # faster alternative "grep"
-#brew install fzf # fuzzy finder (cool thing)
-brew install fish # get fish-shell
-brew install starship # useful terminal suggestions
-brew tap homebrew/cask-fonts && brew install --cask font-meslo-lg-nerd-font # meslo font
+# faster alternative "ls"
+brew install exa 
+# beautiful show files in directories
+#brew install tree 
+brew install peco
+# faster alternative "grep" "ack"
+brew install ripgrep 
+brew install fd
+# fuzzy finder (cool thing)
+#brew install fzf 
+# fish-shell
+brew install fish 
+# useful terminal suggestions
+brew install starship 
+# meslo Nerdfont
+brew tap homebrew/cask-fonts && brew install --cask font-meslo-lg-nerd-font 
 #21-school
 brew install check
 brew install gcovr
@@ -41,7 +50,8 @@ brew install gcovr
 brew install --cask iterm2
 #brew install --cask vlc
 brew install --cask android-studio
-#brew install --cask basictex # LaTex for Vim
+# LaTex for Vim
+#brew install --cask basictex 
 brew install --cask numi
 brew install --cask docker
 
@@ -59,8 +69,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 #git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 ### clone dotfiles ###
-git clone git@github.com:Lhoosp/dotfiles.git $HOME/dotfiles
-cd ~/dotfiles && git checkout develop
+git clone git@github.com:lhoosp/dotfiles.git $HOME/dotfiles
 cp -Rf ~/dotfiles/.config $HOME
 cp ~/dotfiles/.gitconfig $HOME
 cp ~/dotfiles/.gitignore $HOME
